@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:wigootaxiadmin/auth/domain/auth_failure.dart';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:wigootaxiadmin/auth/domain/auth_failure.dart';
 
 part 'auth_form_state.freezed.dart';
 

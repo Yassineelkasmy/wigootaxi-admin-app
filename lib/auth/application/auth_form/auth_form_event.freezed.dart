@@ -80,33 +80,33 @@ class _$AuthFormEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $SignInWithEmailAndPasswordPressedCopyWith<$Res> {
-  factory $SignInWithEmailAndPasswordPressedCopyWith(
-          SignInWithEmailAndPasswordPressed value,
-          $Res Function(SignInWithEmailAndPasswordPressed) then) =
-      _$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>;
+abstract class _$$SignInWithEmailAndPasswordPressedCopyWith<$Res> {
+  factory _$$SignInWithEmailAndPasswordPressedCopyWith(
+          _$SignInWithEmailAndPasswordPressed value,
+          $Res Function(_$SignInWithEmailAndPasswordPressed) then) =
+      __$$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>;
   $Res call({String email, String password});
 }
 
 /// @nodoc
-class _$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>
+class __$$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>
     extends _$AuthFormEventCopyWithImpl<$Res>
-    implements $SignInWithEmailAndPasswordPressedCopyWith<$Res> {
-  _$SignInWithEmailAndPasswordPressedCopyWithImpl(
-      SignInWithEmailAndPasswordPressed _value,
-      $Res Function(SignInWithEmailAndPasswordPressed) _then)
-      : super(_value, (v) => _then(v as SignInWithEmailAndPasswordPressed));
+    implements _$$SignInWithEmailAndPasswordPressedCopyWith<$Res> {
+  __$$SignInWithEmailAndPasswordPressedCopyWithImpl(
+      _$SignInWithEmailAndPasswordPressed _value,
+      $Res Function(_$SignInWithEmailAndPasswordPressed) _then)
+      : super(_value, (v) => _then(v as _$SignInWithEmailAndPasswordPressed));
 
   @override
-  SignInWithEmailAndPasswordPressed get _value =>
-      super._value as SignInWithEmailAndPasswordPressed;
+  _$SignInWithEmailAndPasswordPressed get _value =>
+      super._value as _$SignInWithEmailAndPasswordPressed;
 
   @override
   $Res call({
     Object? email = freezed,
     Object? password = freezed,
   }) {
-    return _then(SignInWithEmailAndPasswordPressed(
+    return _then(_$SignInWithEmailAndPasswordPressed(
       email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -139,7 +139,7 @@ class _$SignInWithEmailAndPasswordPressed
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is SignInWithEmailAndPasswordPressed &&
+            other is _$SignInWithEmailAndPasswordPressed &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password));
   }
@@ -152,9 +152,10 @@ class _$SignInWithEmailAndPasswordPressed
 
   @JsonKey(ignore: true)
   @override
-  $SignInWithEmailAndPasswordPressedCopyWith<SignInWithEmailAndPasswordPressed>
-      get copyWith => _$SignInWithEmailAndPasswordPressedCopyWithImpl<
-          SignInWithEmailAndPasswordPressed>(this, _$identity);
+  _$$SignInWithEmailAndPasswordPressedCopyWith<
+          _$SignInWithEmailAndPasswordPressed>
+      get copyWith => __$$SignInWithEmailAndPasswordPressedCopyWithImpl<
+          _$SignInWithEmailAndPasswordPressed>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -233,27 +234,28 @@ abstract class SignInWithEmailAndPasswordPressed implements AuthFormEvent {
   String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SignInWithEmailAndPasswordPressedCopyWith<SignInWithEmailAndPasswordPressed>
+  _$$SignInWithEmailAndPasswordPressedCopyWith<
+          _$SignInWithEmailAndPasswordPressed>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SignOutPressedCopyWith<$Res> {
-  factory $SignOutPressedCopyWith(
-          SignOutPressed value, $Res Function(SignOutPressed) then) =
-      _$SignOutPressedCopyWithImpl<$Res>;
+abstract class _$$SignOutPressedCopyWith<$Res> {
+  factory _$$SignOutPressedCopyWith(
+          _$SignOutPressed value, $Res Function(_$SignOutPressed) then) =
+      __$$SignOutPressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SignOutPressedCopyWithImpl<$Res>
+class __$$SignOutPressedCopyWithImpl<$Res>
     extends _$AuthFormEventCopyWithImpl<$Res>
-    implements $SignOutPressedCopyWith<$Res> {
-  _$SignOutPressedCopyWithImpl(
-      SignOutPressed _value, $Res Function(SignOutPressed) _then)
-      : super(_value, (v) => _then(v as SignOutPressed));
+    implements _$$SignOutPressedCopyWith<$Res> {
+  __$$SignOutPressedCopyWithImpl(
+      _$SignOutPressed _value, $Res Function(_$SignOutPressed) _then)
+      : super(_value, (v) => _then(v as _$SignOutPressed));
 
   @override
-  SignOutPressed get _value => super._value as SignOutPressed;
+  _$SignOutPressed get _value => super._value as _$SignOutPressed;
 }
 
 /// @nodoc
@@ -269,7 +271,7 @@ class _$SignOutPressed implements SignOutPressed {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SignOutPressed);
+        (other.runtimeType == runtimeType && other is _$SignOutPressed);
   }
 
   @override

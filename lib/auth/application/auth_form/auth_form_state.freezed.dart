@@ -63,11 +63,11 @@ class _$AuthFormStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AuthFormStateCopyWith<$Res>
+abstract class _$$_AuthFormStateCopyWith<$Res>
     implements $AuthFormStateCopyWith<$Res> {
-  factory _$AuthFormStateCopyWith(
-          _AuthFormState value, $Res Function(_AuthFormState) then) =
-      __$AuthFormStateCopyWithImpl<$Res>;
+  factory _$$_AuthFormStateCopyWith(
+          _$_AuthFormState value, $Res Function(_$_AuthFormState) then) =
+      __$$_AuthFormStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {bool isSubmitting,
@@ -75,22 +75,22 @@ abstract class _$AuthFormStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AuthFormStateCopyWithImpl<$Res>
+class __$$_AuthFormStateCopyWithImpl<$Res>
     extends _$AuthFormStateCopyWithImpl<$Res>
-    implements _$AuthFormStateCopyWith<$Res> {
-  __$AuthFormStateCopyWithImpl(
-      _AuthFormState _value, $Res Function(_AuthFormState) _then)
-      : super(_value, (v) => _then(v as _AuthFormState));
+    implements _$$_AuthFormStateCopyWith<$Res> {
+  __$$_AuthFormStateCopyWithImpl(
+      _$_AuthFormState _value, $Res Function(_$_AuthFormState) _then)
+      : super(_value, (v) => _then(v as _$_AuthFormState));
 
   @override
-  _AuthFormState get _value => super._value as _AuthFormState;
+  _$_AuthFormState get _value => super._value as _$_AuthFormState;
 
   @override
   $Res call({
     Object? isSubmitting = freezed,
     Object? authFailureOrSuccessOption = freezed,
   }) {
-    return _then(_AuthFormState(
+    return _then(_$_AuthFormState(
       isSubmitting: isSubmitting == freezed
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
@@ -123,7 +123,7 @@ class _$_AuthFormState implements _AuthFormState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AuthFormState &&
+            other is _$_AuthFormState &&
             const DeepCollectionEquality()
                 .equals(other.isSubmitting, isSubmitting) &&
             const DeepCollectionEquality().equals(
@@ -138,8 +138,8 @@ class _$_AuthFormState implements _AuthFormState {
 
   @JsonKey(ignore: true)
   @override
-  _$AuthFormStateCopyWith<_AuthFormState> get copyWith =>
-      __$AuthFormStateCopyWithImpl<_AuthFormState>(this, _$identity);
+  _$$_AuthFormStateCopyWith<_$_AuthFormState> get copyWith =>
+      __$$_AuthFormStateCopyWithImpl<_$_AuthFormState>(this, _$identity);
 }
 
 abstract class _AuthFormState implements AuthFormState {
@@ -155,6 +155,6 @@ abstract class _AuthFormState implements AuthFormState {
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AuthFormStateCopyWith<_AuthFormState> get copyWith =>
+  _$$_AuthFormStateCopyWith<_$_AuthFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }

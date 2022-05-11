@@ -24,6 +24,9 @@ mixin _$Submission {
   String get permis_arriere => throw _privateConstructorUsedError;
   String get cartegrisse_devant => throw _privateConstructorUsedError;
   String get cartegrisse_arriere => throw _privateConstructorUsedError;
+  String get status => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+  DateTime get ts => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SubmissionCopyWith<Submission> get copyWith =>
@@ -43,7 +46,10 @@ abstract class $SubmissionCopyWith<$Res> {
       String permis_devant,
       String permis_arriere,
       String cartegrisse_devant,
-      String cartegrisse_arriere});
+      String cartegrisse_arriere,
+      String status,
+      String type,
+      DateTime ts});
 }
 
 /// @nodoc
@@ -64,6 +70,9 @@ class _$SubmissionCopyWithImpl<$Res> implements $SubmissionCopyWith<$Res> {
     Object? permis_arriere = freezed,
     Object? cartegrisse_devant = freezed,
     Object? cartegrisse_arriere = freezed,
+    Object? status = freezed,
+    Object? type = freezed,
+    Object? ts = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -98,6 +107,18 @@ class _$SubmissionCopyWithImpl<$Res> implements $SubmissionCopyWith<$Res> {
           ? _value.cartegrisse_arriere
           : cartegrisse_arriere // ignore: cast_nullable_to_non_nullable
               as String,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      ts: ts == freezed
+          ? _value.ts
+          : ts // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -117,7 +138,10 @@ abstract class _$$_SubmissionCopyWith<$Res>
       String permis_devant,
       String permis_arriere,
       String cartegrisse_devant,
-      String cartegrisse_arriere});
+      String cartegrisse_arriere,
+      String status,
+      String type,
+      DateTime ts});
 }
 
 /// @nodoc
@@ -140,6 +164,9 @@ class __$$_SubmissionCopyWithImpl<$Res> extends _$SubmissionCopyWithImpl<$Res>
     Object? permis_arriere = freezed,
     Object? cartegrisse_devant = freezed,
     Object? cartegrisse_arriere = freezed,
+    Object? status = freezed,
+    Object? type = freezed,
+    Object? ts = freezed,
   }) {
     return _then(_$_Submission(
       id: id == freezed
@@ -174,6 +201,18 @@ class __$$_SubmissionCopyWithImpl<$Res> extends _$SubmissionCopyWithImpl<$Res>
           ? _value.cartegrisse_arriere
           : cartegrisse_arriere // ignore: cast_nullable_to_non_nullable
               as String,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      ts: ts == freezed
+          ? _value.ts
+          : ts // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -189,7 +228,10 @@ class _$_Submission implements _Submission {
       required this.permis_devant,
       required this.permis_arriere,
       required this.cartegrisse_devant,
-      required this.cartegrisse_arriere});
+      required this.cartegrisse_arriere,
+      required this.status,
+      required this.type,
+      required this.ts});
 
   @override
   final String id;
@@ -207,10 +249,16 @@ class _$_Submission implements _Submission {
   final String cartegrisse_devant;
   @override
   final String cartegrisse_arriere;
+  @override
+  final String status;
+  @override
+  final String type;
+  @override
+  final DateTime ts;
 
   @override
   String toString() {
-    return 'Submission(id: $id, profil: $profil, cin_devant: $cin_devant, cin_arriere: $cin_arriere, permis_devant: $permis_devant, permis_arriere: $permis_arriere, cartegrisse_devant: $cartegrisse_devant, cartegrisse_arriere: $cartegrisse_arriere)';
+    return 'Submission(id: $id, profil: $profil, cin_devant: $cin_devant, cin_arriere: $cin_arriere, permis_devant: $permis_devant, permis_arriere: $permis_arriere, cartegrisse_devant: $cartegrisse_devant, cartegrisse_arriere: $cartegrisse_arriere, status: $status, type: $type, ts: $ts)';
   }
 
   @override
@@ -231,7 +279,10 @@ class _$_Submission implements _Submission {
             const DeepCollectionEquality()
                 .equals(other.cartegrisse_devant, cartegrisse_devant) &&
             const DeepCollectionEquality()
-                .equals(other.cartegrisse_arriere, cartegrisse_arriere));
+                .equals(other.cartegrisse_arriere, cartegrisse_arriere) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.ts, ts));
   }
 
   @override
@@ -244,7 +295,10 @@ class _$_Submission implements _Submission {
       const DeepCollectionEquality().hash(permis_devant),
       const DeepCollectionEquality().hash(permis_arriere),
       const DeepCollectionEquality().hash(cartegrisse_devant),
-      const DeepCollectionEquality().hash(cartegrisse_arriere));
+      const DeepCollectionEquality().hash(cartegrisse_arriere),
+      const DeepCollectionEquality().hash(status),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(ts));
 
   @JsonKey(ignore: true)
   @override
@@ -261,7 +315,10 @@ abstract class _Submission implements Submission {
       required final String permis_devant,
       required final String permis_arriere,
       required final String cartegrisse_devant,
-      required final String cartegrisse_arriere}) = _$_Submission;
+      required final String cartegrisse_arriere,
+      required final String status,
+      required final String type,
+      required final DateTime ts}) = _$_Submission;
 
   @override
   String get id => throw _privateConstructorUsedError;
@@ -279,6 +336,12 @@ abstract class _Submission implements Submission {
   String get cartegrisse_devant => throw _privateConstructorUsedError;
   @override
   String get cartegrisse_arriere => throw _privateConstructorUsedError;
+  @override
+  String get status => throw _privateConstructorUsedError;
+  @override
+  String get type => throw _privateConstructorUsedError;
+  @override
+  DateTime get ts => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_SubmissionCopyWith<_$_Submission> get copyWith =>

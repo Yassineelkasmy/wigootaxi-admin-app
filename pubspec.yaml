@@ -41,8 +41,8 @@ dependencies:
   firebase_storage: ^10.2.13
   cloud_firestore: ^3.1.14
   google_sign_in:
-  flutter_hooks:
-  hooks_riverpod:
+  flutter_hooks: ^0.18.3
+  hooks_riverpod: ^1.0.3
   dartz:
   freezed_annotation:
   auto_route:
@@ -56,7 +56,6 @@ dependencies:
   drawerbehavior: ^2.2.2
   url_launcher: ^6.0.20
   google_maps_flutter: ^2.1.3
-  location: ^4.3.0
   shared_preferences: ^2.0.13
   adaptive_dialog: ^1.5.0+1
   flutter_facebook_auth: ^4.1.2
