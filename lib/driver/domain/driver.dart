@@ -10,7 +10,7 @@ class Driver with _$Driver {
   const factory Driver({
     required String id,
     required String username,
-    required bool isPhoneVeified,
+    required bool isPhoneVerified,
     required String email,
     required String phone,
     required DateTime ts,

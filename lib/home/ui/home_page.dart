@@ -39,9 +39,12 @@ class HomePage extends StatelessWidget {
               ),
               20.h.verticalSpace,
               buildHomeCard(
-                  text: 'Demandes',
-                  icon: Icon(Icons.car_rental),
-                  onPressed: () {}),
+                text: 'Demandes',
+                icon: Icon(Icons.car_rental),
+                onPressed: () {
+                  AutoRouter.of(context).push(SubmissionsPageRoute());
+                },
+              ),
             ],
           ),
         ),

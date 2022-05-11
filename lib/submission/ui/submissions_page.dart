@@ -3,28 +3,29 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:wigootaxiadmin/driver/ui/driver_item.dart';
 import 'package:wigootaxiadmin/providers/driver_provider.provider.dart';
+import 'package:wigootaxiadmin/providers/submission_provider.dart';
 
-class DriversPage extends HookConsumerWidget {
-  const DriversPage({Key? key}) : super(key: key);
+class SubmissionsPage extends HookConsumerWidget {
+  const SubmissionsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final driverState = ref.watch(driverProivder);
+    final submissionState = ref.watch(submissionProvider);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chauffeurs'),
+        title: Text('Demandes'),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 20.w,
           vertical: 20.h,
         ),
-        child: ListView.builder(
-          itemCount: driverState.drivers.length,
-          itemBuilder: (context, index) {
-            return DriverItem(driver: driverState.drivers[index]);
-          },
-        ),
+        // child: ListView.builder(
+        //   itemCount: submissionState.drivers.length,
+        //   itemBuilder: (context, index) {
+        //     return DriverItem(driver: submissionState.drivers[index]);
+        //   },
+        // ),
       ),
     );
   }

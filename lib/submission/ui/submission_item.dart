@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
-import 'package:wigootaxiadmin/driver/domain/driver.dart';
+import 'package:wigootaxiadmin/submission/domain/submission.dart';
 
-class DriverItem extends StatelessWidget {
-  DriverItem({Key? key, required this.driver}) : super(key: key);
-  final Driver driver;
+class SubmissionItem extends StatelessWidget {
+  SubmissionItem({Key? key, required this.submission}) : super(key: key);
+  final Submission submission;
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +28,14 @@ class DriverItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    driver.username,
+                    submission.type,
                     style: TextStyle(
                       fontSize: 16.sp,
                     ),
                   ),
                   2.h.verticalSpace,
                   Text(
-                    driver.phone,
+                    submission.phone,
                     style: TextStyle(
                       fontSize: 16.sp,
                     ),
@@ -49,14 +49,14 @@ class DriverItem extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    driver.email,
+                    submission.email,
                     style: TextStyle(
                       fontSize: 16.sp,
                     ),
                   ),
                   2.h.verticalSpace,
                   Text(
-                    DateFormat('yyyy-MM-dd hh:mm').format(driver.ts),
+                    DateFormat('yyyy-MM-dd hh:mm').format(submission.ts),
                     style: TextStyle(
                       fontSize: 16.sp,
                     ),

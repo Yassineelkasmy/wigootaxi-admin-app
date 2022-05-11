@@ -9,7 +9,7 @@ part of 'driver.dart';
 Driver _$DriverFromJson(Map<String, dynamic> json) => Driver(
       id: json['id'] as String,
       username: json['username'] as String,
-      isPhoneVeified: json['isPhoneVeified'] as bool,
+      isPhoneVerified: json['isPhoneVerified'] as bool,
       email: json['email'] as String,
       phone: json['phone'] as String,
       ts: DateTime.parse(json['ts'] as String),
@@ -18,7 +18,7 @@ Driver _$DriverFromJson(Map<String, dynamic> json) => Driver(
 Map<String, dynamic> _$DriverToJson(Driver instance) => <String, dynamic>{
       'id': instance.id,
       'username': instance.username,
-      'isPhoneVeified': instance.isPhoneVeified,
+      'isPhoneVerified': instance.isPhoneVerified,
       'email': instance.email,
       'phone': instance.phone,
       'ts': instance.ts.toIso8601String(),

@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Driver {
   String get id => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
-  bool get isPhoneVeified => throw _privateConstructorUsedError;
+  bool get isPhoneVerified => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   String get phone => throw _privateConstructorUsedError;
   DateTime get ts => throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ abstract class $DriverCopyWith<$Res> {
   $Res call(
       {String id,
       String username,
-      bool isPhoneVeified,
+      bool isPhoneVerified,
       String email,
       String phone,
       DateTime ts});
@@ -52,7 +52,7 @@ class _$DriverCopyWithImpl<$Res> implements $DriverCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? username = freezed,
-    Object? isPhoneVeified = freezed,
+    Object? isPhoneVerified = freezed,
     Object? email = freezed,
     Object? phone = freezed,
     Object? ts = freezed,
@@ -66,9 +66,9 @@ class _$DriverCopyWithImpl<$Res> implements $DriverCopyWith<$Res> {
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      isPhoneVeified: isPhoneVeified == freezed
-          ? _value.isPhoneVeified
-          : isPhoneVeified // ignore: cast_nullable_to_non_nullable
+      isPhoneVerified: isPhoneVerified == freezed
+          ? _value.isPhoneVerified
+          : isPhoneVerified // ignore: cast_nullable_to_non_nullable
               as bool,
       email: email == freezed
           ? _value.email
@@ -94,7 +94,7 @@ abstract class _$$_DriverCopyWith<$Res> implements $DriverCopyWith<$Res> {
   $Res call(
       {String id,
       String username,
-      bool isPhoneVeified,
+      bool isPhoneVerified,
       String email,
       String phone,
       DateTime ts});
@@ -113,7 +113,7 @@ class __$$_DriverCopyWithImpl<$Res> extends _$DriverCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? username = freezed,
-    Object? isPhoneVeified = freezed,
+    Object? isPhoneVerified = freezed,
     Object? email = freezed,
     Object? phone = freezed,
     Object? ts = freezed,
@@ -127,9 +127,9 @@ class __$$_DriverCopyWithImpl<$Res> extends _$DriverCopyWithImpl<$Res>
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      isPhoneVeified: isPhoneVeified == freezed
-          ? _value.isPhoneVeified
-          : isPhoneVeified // ignore: cast_nullable_to_non_nullable
+      isPhoneVerified: isPhoneVerified == freezed
+          ? _value.isPhoneVerified
+          : isPhoneVerified // ignore: cast_nullable_to_non_nullable
               as bool,
       email: email == freezed
           ? _value.email
@@ -153,7 +153,7 @@ class _$_Driver implements _Driver {
   const _$_Driver(
       {required this.id,
       required this.username,
-      required this.isPhoneVeified,
+      required this.isPhoneVerified,
       required this.email,
       required this.phone,
       required this.ts});
@@ -163,7 +163,7 @@ class _$_Driver implements _Driver {
   @override
   final String username;
   @override
-  final bool isPhoneVeified;
+  final bool isPhoneVerified;
   @override
   final String email;
   @override
@@ -173,7 +173,7 @@ class _$_Driver implements _Driver {
 
   @override
   String toString() {
-    return 'Driver(id: $id, username: $username, isPhoneVeified: $isPhoneVeified, email: $email, phone: $phone, ts: $ts)';
+    return 'Driver(id: $id, username: $username, isPhoneVerified: $isPhoneVerified, email: $email, phone: $phone, ts: $ts)';
   }
 
   @override
@@ -184,7 +184,7 @@ class _$_Driver implements _Driver {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.username, username) &&
             const DeepCollectionEquality()
-                .equals(other.isPhoneVeified, isPhoneVeified) &&
+                .equals(other.isPhoneVerified, isPhoneVerified) &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.phone, phone) &&
             const DeepCollectionEquality().equals(other.ts, ts));
@@ -195,7 +195,7 @@ class _$_Driver implements _Driver {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(username),
-      const DeepCollectionEquality().hash(isPhoneVeified),
+      const DeepCollectionEquality().hash(isPhoneVerified),
       const DeepCollectionEquality().hash(email),
       const DeepCollectionEquality().hash(phone),
       const DeepCollectionEquality().hash(ts));
@@ -210,7 +210,7 @@ abstract class _Driver implements Driver {
   const factory _Driver(
       {required final String id,
       required final String username,
-      required final bool isPhoneVeified,
+      required final bool isPhoneVerified,
       required final String email,
       required final String phone,
       required final DateTime ts}) = _$_Driver;
@@ -220,7 +220,7 @@ abstract class _Driver implements Driver {
   @override
   String get username => throw _privateConstructorUsedError;
   @override
-  bool get isPhoneVeified => throw _privateConstructorUsedError;
+  bool get isPhoneVerified => throw _privateConstructorUsedError;
   @override
   String get email => throw _privateConstructorUsedError;
   @override

@@ -6,7 +6,7 @@ import 'package:wigootaxiadmin/submission/domain/submission.dart';
 
 class DriverService {
   DriverService(this.firestore) {
-    collectionReference = firestore.collection('users');
+    collectionReference = firestore.collection('drivers');
   }
 
   final FirebaseFirestore firestore;
@@ -41,6 +41,7 @@ class DriverService {
           .toList();
       return right(requests);
     } catch (_) {
+      print(_);
       return left(const FireStoreFailure.serverError());
     }
   }

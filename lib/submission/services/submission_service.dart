@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
-import 'package:wigootaxiadmin/shared/firestore/firestore_failures.dart';
 import 'package:wigootaxiadmin/submission/domain/submission.dart';
 import 'package:wigootaxiadmin/submission/domain/submission_failure.dart';
 

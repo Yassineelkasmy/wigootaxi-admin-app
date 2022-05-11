@@ -18,6 +18,7 @@ class DriverController extends StateNotifier<DriverState> {
           (failure) => null,
           (drivers) => state = state.copyWith(drivers: drivers),
         );
+        print(state.drivers.length);
         state = state.copyWith(isLoading: false);
       },
     );
