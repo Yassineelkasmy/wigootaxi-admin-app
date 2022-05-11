@@ -65,7 +65,7 @@ class LoginPage extends HookConsumerWidget {
                   if (loginForm.valid) {
                     authFormController.mapEventToState(
                       AuthFormEvent.signInWithEmailAndPasswordPressed(
-                        "${loginForm.value['username']}@hermosa.ma",
+                        "${loginForm.value['username']}@wigootaxi.ma",
                         loginForm.value['password'].toString(),
                       ),
                     );

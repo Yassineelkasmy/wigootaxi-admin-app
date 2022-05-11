@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:wigootaxiadmin/drivers/domain/driver.dart';
+import 'package:wigootaxiadmin/driver/domain/driver.dart';
 
 part 'driver_state.freezed.dart';
 

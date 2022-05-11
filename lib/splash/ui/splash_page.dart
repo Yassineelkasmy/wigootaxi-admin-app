@@ -3,6 +3,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:wigootaxiadmin/auth/application/auth_state.dart';
+import 'package:wigootaxiadmin/auth/ui/login_page.dart';
+import 'package:wigootaxiadmin/providers/auth_provider.dart';
+import 'package:wigootaxiadmin/routes/router.gr.dart';
 import 'package:wigootaxiadmin/shared/logo.dart';
 
 class SplashPage extends HookConsumerWidget {
@@ -11,15 +15,15 @@ class SplashPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
-    // ref.listen<AuthState>(authtProvider, (_, nextAuthState) {
-    //   nextAuthState.map(
-    //     initial: (_) {},
-    //     authenticated: (_) => AutoRouter.of(context).push(IntroPageRoute()),
-    //     unauthenticated: (unAuth) {
-    //       AutoRouter.of(context).replace(IntroPageRoute());
-    //     },
-    //   );
-    // });
+    ref.listen<AuthState>(authProvider, (_, nextAuthState) {
+      nextAuthState.map(
+        initial: (_) {},
+        authenticated: (_) => AutoRouter.of(context).push(HomePageRoute()),
+        unauthenticated: (unAuth) {
+          AutoRouter.of(context).push(LoginPageRoute());
+        },
+      );
+    });
 
     return Scaffold(
       body: Scaffold(
