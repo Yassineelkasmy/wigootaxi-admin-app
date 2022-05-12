@@ -19,32 +19,38 @@ mixin _$SubmissionEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchRequested,
+    required TResult Function(String status, String id) statusChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? fetchRequested,
+    TResult Function(String status, String id)? statusChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchRequested,
+    TResult Function(String status, String id)? statusChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FetchRequested value) fetchRequested,
+    required TResult Function(StatusChanged value) statusChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FetchRequested value)? fetchRequested,
+    TResult Function(StatusChanged value)? statusChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FetchRequested value)? fetchRequested,
+    TResult Function(StatusChanged value)? statusChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -109,6 +115,7 @@ class _$FetchRequested implements FetchRequested {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchRequested,
+    required TResult Function(String status, String id) statusChanged,
   }) {
     return fetchRequested();
   }
@@ -117,6 +124,7 @@ class _$FetchRequested implements FetchRequested {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? fetchRequested,
+    TResult Function(String status, String id)? statusChanged,
   }) {
     return fetchRequested?.call();
   }
@@ -125,6 +133,7 @@ class _$FetchRequested implements FetchRequested {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchRequested,
+    TResult Function(String status, String id)? statusChanged,
     required TResult orElse(),
   }) {
     if (fetchRequested != null) {
@@ -137,6 +146,7 @@ class _$FetchRequested implements FetchRequested {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FetchRequested value) fetchRequested,
+    required TResult Function(StatusChanged value) statusChanged,
   }) {
     return fetchRequested(this);
   }
@@ -145,6 +155,7 @@ class _$FetchRequested implements FetchRequested {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FetchRequested value)? fetchRequested,
+    TResult Function(StatusChanged value)? statusChanged,
   }) {
     return fetchRequested?.call(this);
   }
@@ -153,6 +164,7 @@ class _$FetchRequested implements FetchRequested {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FetchRequested value)? fetchRequested,
+    TResult Function(StatusChanged value)? statusChanged,
     required TResult orElse(),
   }) {
     if (fetchRequested != null) {
@@ -164,4 +176,150 @@ class _$FetchRequested implements FetchRequested {
 
 abstract class FetchRequested implements SubmissionEvent {
   const factory FetchRequested() = _$FetchRequested;
+}
+
+/// @nodoc
+abstract class _$$StatusChangedCopyWith<$Res> {
+  factory _$$StatusChangedCopyWith(
+          _$StatusChanged value, $Res Function(_$StatusChanged) then) =
+      __$$StatusChangedCopyWithImpl<$Res>;
+  $Res call({String status, String id});
+}
+
+/// @nodoc
+class __$$StatusChangedCopyWithImpl<$Res>
+    extends _$SubmissionEventCopyWithImpl<$Res>
+    implements _$$StatusChangedCopyWith<$Res> {
+  __$$StatusChangedCopyWithImpl(
+      _$StatusChanged _value, $Res Function(_$StatusChanged) _then)
+      : super(_value, (v) => _then(v as _$StatusChanged));
+
+  @override
+  _$StatusChanged get _value => super._value as _$StatusChanged;
+
+  @override
+  $Res call({
+    Object? status = freezed,
+    Object? id = freezed,
+  }) {
+    return _then(_$StatusChanged(
+      status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$StatusChanged implements StatusChanged {
+  const _$StatusChanged(this.status, this.id);
+
+  @override
+  final String status;
+  @override
+  final String id;
+
+  @override
+  String toString() {
+    return 'SubmissionEvent.statusChanged(status: $status, id: $id)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$StatusChanged &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality().equals(other.id, id));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(status),
+      const DeepCollectionEquality().hash(id));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$StatusChangedCopyWith<_$StatusChanged> get copyWith =>
+      __$$StatusChangedCopyWithImpl<_$StatusChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchRequested,
+    required TResult Function(String status, String id) statusChanged,
+  }) {
+    return statusChanged(status, id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? fetchRequested,
+    TResult Function(String status, String id)? statusChanged,
+  }) {
+    return statusChanged?.call(status, id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchRequested,
+    TResult Function(String status, String id)? statusChanged,
+    required TResult orElse(),
+  }) {
+    if (statusChanged != null) {
+      return statusChanged(status, id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FetchRequested value) fetchRequested,
+    required TResult Function(StatusChanged value) statusChanged,
+  }) {
+    return statusChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FetchRequested value)? fetchRequested,
+    TResult Function(StatusChanged value)? statusChanged,
+  }) {
+    return statusChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FetchRequested value)? fetchRequested,
+    TResult Function(StatusChanged value)? statusChanged,
+    required TResult orElse(),
+  }) {
+    if (statusChanged != null) {
+      return statusChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class StatusChanged implements SubmissionEvent {
+  const factory StatusChanged(final String status, final String id) =
+      _$StatusChanged;
+
+  String get status => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$StatusChangedCopyWith<_$StatusChanged> get copyWith =>
+      throw _privateConstructorUsedError;
 }

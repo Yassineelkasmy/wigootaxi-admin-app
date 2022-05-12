@@ -42,4 +42,16 @@ class SubmissionService {
       return left(const SubmissionFailure.serverError());
     }
   }
+
+  Future<Either<SubmissionFailure, Unit>> changeSubmissionStatus(
+    String id,
+    String status,
+  ) async {
+    try {
+      await collectionReference.doc(id).update({"status": status});
+      return right(unit);
+    } catch (e) {
+      return left(const SubmissionFailure.serverError());
+    }
+  }
 }

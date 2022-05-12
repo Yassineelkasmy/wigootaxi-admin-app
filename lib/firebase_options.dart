@@ -60,7 +60,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '114866143933',
     projectId: 'taxi-app-driver-a27da',
     storageBucket: 'taxi-app-driver-a27da.appspot.com',
-    iosClientId: '114866143933-6764r68clrb8ct60qj9gqcvg6pkj2paj.apps.googleusercontent.com',
+    iosClientId:
+        '114866143933-6764r68clrb8ct60qj9gqcvg6pkj2paj.apps.googleusercontent.com',
     iosBundleId: 'com.example.wigootaxiadmin',
   );
 }

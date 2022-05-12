@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:wigootaxiadmin/driver/ui/driver_item.dart';
 import 'package:wigootaxiadmin/providers/driver_provider.provider.dart';
 import 'package:wigootaxiadmin/providers/submission_provider.dart';
+import 'package:wigootaxiadmin/submission/ui/submission_item.dart';
 
 class SubmissionsPage extends HookConsumerWidget {
   const SubmissionsPage({Key? key}) : super(key: key);
@@ -20,12 +21,13 @@ class SubmissionsPage extends HookConsumerWidget {
           horizontal: 20.w,
           vertical: 20.h,
         ),
-        // child: ListView.builder(
-        //   itemCount: submissionState.drivers.length,
-        //   itemBuilder: (context, index) {
-        //     return DriverItem(driver: submissionState.drivers[index]);
-        //   },
-        // ),
+        child: ListView.builder(
+          itemCount: submissionState.submissions.length,
+          itemBuilder: (context, index) {
+            return SubmissionItem(
+                submission: submissionState.submissions[index]);
+          },
+        ),
       ),
     );
   }
