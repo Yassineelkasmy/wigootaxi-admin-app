@@ -41,7 +41,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
                 children: [
                   TextSpan(
                     text: submission.type,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -59,7 +59,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
                 children: [
                   TextSpan(
                     text: submission.username,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -87,9 +87,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
             20.h.verticalSpace,
             buildHomeCard(
               text: 'Profil',
-              icon: const Icon(
-                Icons.file_copy,
-              ),
+              icon: Icons.file_copy,
               onPressed: () {
                 AutoRouter.of(context).push(
                   DocumentImagePageRoute(
@@ -102,9 +100,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
             10.h.verticalSpace,
             buildHomeCard(
               text: 'Cin devant',
-              icon: const Icon(
-                Icons.file_copy,
-              ),
+              icon: Icons.file_copy,
               onPressed: () {
                 AutoRouter.of(context).push(
                   DocumentImagePageRoute(
@@ -117,9 +113,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
             10.h.verticalSpace,
             buildHomeCard(
               text: 'Cin arriere',
-              icon: const Icon(
-                Icons.file_copy,
-              ),
+              icon: Icons.file_copy,
               onPressed: () {
                 AutoRouter.of(context).push(
                   DocumentImagePageRoute(
@@ -132,9 +126,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
             10.h.verticalSpace,
             buildHomeCard(
               text: 'Carte grisse devant',
-              icon: const Icon(
-                Icons.file_copy,
-              ),
+              icon: Icons.file_copy,
               onPressed: () {
                 AutoRouter.of(context).push(
                   DocumentImagePageRoute(
@@ -147,9 +139,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
             10.h.verticalSpace,
             buildHomeCard(
               text: 'Carte grisse arriere',
-              icon: const Icon(
-                Icons.file_copy,
-              ),
+              icon: Icons.file_copy,
               onPressed: () {
                 AutoRouter.of(context).push(
                   DocumentImagePageRoute(
@@ -162,9 +152,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
             10.h.verticalSpace,
             buildHomeCard(
               text: 'Permis devant',
-              icon: const Icon(
-                Icons.file_copy,
-              ),
+              icon: Icons.file_copy,
               onPressed: () {
                 AutoRouter.of(context).push(
                   DocumentImagePageRoute(
@@ -177,9 +165,7 @@ class SubmissionDetailsPage extends HookConsumerWidget {
             10.h.verticalSpace,
             buildHomeCard(
               text: 'Permis arriere',
-              icon: const Icon(
-                Icons.file_copy,
-              ),
+              icon: Icons.file_copy,
               onPressed: () {
                 AutoRouter.of(context).push(
                   DocumentImagePageRoute(

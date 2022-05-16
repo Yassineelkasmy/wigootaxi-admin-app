@@ -17,33 +17,46 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: Text('Espace Admin'),
+          title: Text('Admin WIGOO TAXI'),
         ),
         body: Padding(
           padding: kPadding,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               20.h.verticalSpace,
-              buildHomeCard(
-                text: 'Chauffeurs',
-                icon: Icon(Icons.person),
-                onPressed: () {
-                  AutoRouter.of(context).push(DriversPageRoute());
-                },
+              Row(
+                children: [
+                  buildHomeCard(
+                    text: 'Chauffeurs',
+                    icon: Icons.person,
+                    onPressed: () {
+                      AutoRouter.of(context).push(DriversPageRoute());
+                    },
+                  ),
+                  10.w.horizontalSpace,
+                  buildHomeCard(
+                    text: 'Utilisateurs',
+                    icon: Icons.man,
+                    onPressed: () {
+                      AutoRouter.of(context).push(UsersPageRoute());
+                    },
+                  ),
+                ],
               ),
               20.h.verticalSpace,
-              buildHomeCard(
-                text: 'Utilisateurs',
-                icon: Icon(Icons.man),
-                onPressed: () {},
-              ),
-              20.h.verticalSpace,
-              buildHomeCard(
-                text: 'Demandes',
-                icon: Icon(Icons.car_rental),
-                onPressed: () {
-                  AutoRouter.of(context).push(SubmissionsPageRoute());
-                },
+              Row(
+                children: [
+                  10.w.horizontalSpace,
+                  buildHomeCard(
+                    text: 'Demandes',
+                    icon: Icons.car_rental,
+                    onPressed: () {
+                      AutoRouter.of(context).push(SubmissionsPageRoute());
+                    },
+                  ),
+                ],
               ),
             ],
           ),

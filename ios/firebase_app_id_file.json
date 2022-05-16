@@ -1,7 +1,7 @@
 {
   "file_generated_by": "FlutterFire CLI",
   "purpose": "FirebaseAppID & ProjectID for this Firebase app in this directory",
-  "GOOGLE_APP_ID": "1:114866143933:ios:76c9c667188aa75e99add4",
-  "FIREBASE_PROJECT_ID": "taxi-app-driver-a27da",
-  "GCM_SENDER_ID": "114866143933"
+  "GOOGLE_APP_ID": "1:1010420009793:ios:f5d37a1ad6dfc0f8af2fc0",
+  "FIREBASE_PROJECT_ID": "taxi-app-user-4800a",
+  "GCM_SENDER_ID": "1010420009793"
 }

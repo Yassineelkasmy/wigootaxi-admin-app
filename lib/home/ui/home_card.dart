@@ -3,34 +3,40 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget buildHomeCard({
   required String text,
-  required Icon icon,
+  required IconData icon,
   required void Function() onPressed,
 }) {
-  return ElevatedButton(
-    style: ElevatedButton.styleFrom(
-      padding: EdgeInsets.symmetric(
-        vertical: 15.h,
-        horizontal: 15.w,
+  return TextButton(
+    style: TextButton.styleFrom(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
       ),
+      backgroundColor: Colors.white,
+      elevation: 2,
     ),
     onPressed: onPressed,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
-          children: [
+    child: SizedBox(
+      width: 100.w,
+      height: 100.h,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
             icon,
-            10.w.horizontalSpace,
-            Text(
-              text,
-              style: TextStyle(
-                fontSize: 16.sp,
-              ),
-            )
-          ],
-        ),
-        Icon(Icons.arrow_forward_ios)
-      ],
+            size: 30.w,
+          ),
+          const SizedBox(height: 2),
+          Text(
+            text,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 15.sp,
+            ),
+          ),
+        ],
+      ),
     ),
   );
 }
