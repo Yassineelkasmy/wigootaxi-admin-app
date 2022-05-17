@@ -18,41 +18,32 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$MessageEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String text, String subject, String attachment)
-        messageSent,
     required TResult Function() fetchRequested,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String text, String subject, String attachment)?
-        messageSent,
     TResult Function()? fetchRequested,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String text, String subject, String attachment)?
-        messageSent,
     TResult Function()? fetchRequested,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(MessageSent value) messageSent,
     required TResult Function(FetchRequested value) fetchRequested,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(MessageSent value)? messageSent,
     TResult Function(FetchRequested value)? fetchRequested,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(MessageSent value)? messageSent,
     TResult Function(FetchRequested value)? fetchRequested,
     required TResult orElse(),
   }) =>
@@ -73,166 +64,6 @@ class _$MessageEventCopyWithImpl<$Res> implements $MessageEventCopyWith<$Res> {
   final MessageEvent _value;
   // ignore: unused_field
   final $Res Function(MessageEvent) _then;
-}
-
-/// @nodoc
-abstract class _$$MessageSentCopyWith<$Res> {
-  factory _$$MessageSentCopyWith(
-          _$MessageSent value, $Res Function(_$MessageSent) then) =
-      __$$MessageSentCopyWithImpl<$Res>;
-  $Res call({String text, String subject, String attachment});
-}
-
-/// @nodoc
-class __$$MessageSentCopyWithImpl<$Res> extends _$MessageEventCopyWithImpl<$Res>
-    implements _$$MessageSentCopyWith<$Res> {
-  __$$MessageSentCopyWithImpl(
-      _$MessageSent _value, $Res Function(_$MessageSent) _then)
-      : super(_value, (v) => _then(v as _$MessageSent));
-
-  @override
-  _$MessageSent get _value => super._value as _$MessageSent;
-
-  @override
-  $Res call({
-    Object? text = freezed,
-    Object? subject = freezed,
-    Object? attachment = freezed,
-  }) {
-    return _then(_$MessageSent(
-      text == freezed
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      subject == freezed
-          ? _value.subject
-          : subject // ignore: cast_nullable_to_non_nullable
-              as String,
-      attachment == freezed
-          ? _value.attachment
-          : attachment // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$MessageSent implements MessageSent {
-  const _$MessageSent(this.text, this.subject, this.attachment);
-
-  @override
-  final String text;
-  @override
-  final String subject;
-  @override
-  final String attachment;
-
-  @override
-  String toString() {
-    return 'MessageEvent.messageSent(text: $text, subject: $subject, attachment: $attachment)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$MessageSent &&
-            const DeepCollectionEquality().equals(other.text, text) &&
-            const DeepCollectionEquality().equals(other.subject, subject) &&
-            const DeepCollectionEquality()
-                .equals(other.attachment, attachment));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(text),
-      const DeepCollectionEquality().hash(subject),
-      const DeepCollectionEquality().hash(attachment));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$MessageSentCopyWith<_$MessageSent> get copyWith =>
-      __$$MessageSentCopyWithImpl<_$MessageSent>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String text, String subject, String attachment)
-        messageSent,
-    required TResult Function() fetchRequested,
-  }) {
-    return messageSent(text, subject, attachment);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String text, String subject, String attachment)?
-        messageSent,
-    TResult Function()? fetchRequested,
-  }) {
-    return messageSent?.call(text, subject, attachment);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String text, String subject, String attachment)?
-        messageSent,
-    TResult Function()? fetchRequested,
-    required TResult orElse(),
-  }) {
-    if (messageSent != null) {
-      return messageSent(text, subject, attachment);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(MessageSent value) messageSent,
-    required TResult Function(FetchRequested value) fetchRequested,
-  }) {
-    return messageSent(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(MessageSent value)? messageSent,
-    TResult Function(FetchRequested value)? fetchRequested,
-  }) {
-    return messageSent?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(MessageSent value)? messageSent,
-    TResult Function(FetchRequested value)? fetchRequested,
-    required TResult orElse(),
-  }) {
-    if (messageSent != null) {
-      return messageSent(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class MessageSent implements MessageEvent {
-  const factory MessageSent(
-          final String text, final String subject, final String attachment) =
-      _$MessageSent;
-
-  String get text => throw _privateConstructorUsedError;
-  String get subject => throw _privateConstructorUsedError;
-  String get attachment => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  _$$MessageSentCopyWith<_$MessageSent> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -276,8 +107,6 @@ class _$FetchRequested implements FetchRequested {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String text, String subject, String attachment)
-        messageSent,
     required TResult Function() fetchRequested,
   }) {
     return fetchRequested();
@@ -286,8 +115,6 @@ class _$FetchRequested implements FetchRequested {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String text, String subject, String attachment)?
-        messageSent,
     TResult Function()? fetchRequested,
   }) {
     return fetchRequested?.call();
@@ -296,8 +123,6 @@ class _$FetchRequested implements FetchRequested {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String text, String subject, String attachment)?
-        messageSent,
     TResult Function()? fetchRequested,
     required TResult orElse(),
   }) {
@@ -310,7 +135,6 @@ class _$FetchRequested implements FetchRequested {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(MessageSent value) messageSent,
     required TResult Function(FetchRequested value) fetchRequested,
   }) {
     return fetchRequested(this);
@@ -319,7 +143,6 @@ class _$FetchRequested implements FetchRequested {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(MessageSent value)? messageSent,
     TResult Function(FetchRequested value)? fetchRequested,
   }) {
     return fetchRequested?.call(this);
@@ -328,7 +151,6 @@ class _$FetchRequested implements FetchRequested {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(MessageSent value)? messageSent,
     TResult Function(FetchRequested value)? fetchRequested,
     required TResult orElse(),
   }) {

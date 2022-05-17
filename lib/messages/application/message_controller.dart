@@ -11,29 +11,12 @@ class MessageController extends StateNotifier<MessageState> {
   final messageService = MessageService();
 
   Future mapEventToState(MessageEvent event) {
-    return event.map(messageSent: (event) async {
-      state = state.copyWith(
-        isLoading: true,
-      );
-      final successOrFailure = await messageService.sendMessage(
-        Message(
-            subject: event.subject,
-            text: event.text,
-            attachment: event.attachment),
-      );
-
-      successOrFailure.fold(
-        (failure) => null,
-        (success) => state = state.copyWith(
-          sent: true,
-        ),
-      );
-
-      state = state.copyWith(
-        isLoading: false,
-      );
-    }, fetchRequested: (event) async {
+    return event.map(fetchRequested: (event) async {
       final messagesOrFailures = await messageService.getMessages();
+      messagesOrFailures.fold(
+        (failure) => null,
+        (messages) => state = state.copyWith(messages: messages),
+      );
     });
   }
 }

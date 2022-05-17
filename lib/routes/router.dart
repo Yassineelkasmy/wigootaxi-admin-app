@@ -2,6 +2,8 @@ import 'package:auto_route/annotations.dart';
 import 'package:wigootaxiadmin/auth/ui/login_page.dart';
 import 'package:wigootaxiadmin/driver/ui/drivers_page.dart';
 import 'package:wigootaxiadmin/home/ui/home_page.dart';
+import 'package:wigootaxiadmin/messages/ui/message_details_page.dart';
+import 'package:wigootaxiadmin/messages/ui/messages_page.dart';
 import 'package:wigootaxiadmin/splash/ui/splash_page.dart';
 import 'package:wigootaxiadmin/submission/ui/document_image_page.dart';
 import 'package:wigootaxiadmin/submission/ui/submission_details.dart';
@@ -16,6 +18,8 @@ import 'package:wigootaxiadmin/user/ui/users_page.dart';
   AutoRoute(page: UsersPage),
   AutoRoute(page: SubmissionsPage),
   AutoRoute(page: SubmissionDetailsPage),
+  AutoRoute(page: MessageDetailsPage),
+  AutoRoute(page: MessagesPage),
   AutoRoute(page: DocumentImagePage),
 ])
 class $AppRouter {}

@@ -4,11 +4,5 @@ part 'message_event.freezed.dart';
 
 @freezed
 class MessageEvent with _$MessageEvent {
-  const factory MessageEvent.messageSent(
-    String text,
-    String subject,
-    String attachment,
-  ) = MessageSent;
-
   const factory MessageEvent.fetchRequested() = FetchRequested;
 }

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'message.freezed.dart';
@@ -10,9 +11,13 @@ class Message with _$Message {
     required String text,
     required String subject,
     required String attachment,
+    required String email,
+    required DateTime ts,
   }) = _Message;
 
   factory Message.fromJson(Map<String, dynamic> json) {
+    json["ts"] = ((json["ts"] as Timestamp).toDate().toString());
+
     return _$MessageFromJson(json);
   }
 }

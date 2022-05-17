@@ -23,6 +23,7 @@ class MessageService {
           .collection('messages')
           .orderBy(FieldPath.documentId)
           .get();
+      print(data.docs.first.data());
       final requests = data.docs
           .map(
             (doc) => Message.fromJson((doc.data() as Map<String, dynamic>)

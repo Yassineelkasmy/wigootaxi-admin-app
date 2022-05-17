@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
                     text: 'Messages',
                     icon: Icons.message,
                     onPressed: () {
-                      AutoRouter.of(context).push(SubmissionsPageRoute());
+                      AutoRouter.of(context).push(MessagesPageRoute());
                     },
                   ),
                 ],

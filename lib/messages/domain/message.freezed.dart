@@ -19,6 +19,8 @@ mixin _$Message {
   String get text => throw _privateConstructorUsedError;
   String get subject => throw _privateConstructorUsedError;
   String get attachment => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  DateTime get ts => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MessageCopyWith<Message> get copyWith => throw _privateConstructorUsedError;
@@ -28,7 +30,12 @@ mixin _$Message {
 abstract class $MessageCopyWith<$Res> {
   factory $MessageCopyWith(Message value, $Res Function(Message) then) =
       _$MessageCopyWithImpl<$Res>;
-  $Res call({String text, String subject, String attachment});
+  $Res call(
+      {String text,
+      String subject,
+      String attachment,
+      String email,
+      DateTime ts});
 }
 
 /// @nodoc
@@ -44,6 +51,8 @@ class _$MessageCopyWithImpl<$Res> implements $MessageCopyWith<$Res> {
     Object? text = freezed,
     Object? subject = freezed,
     Object? attachment = freezed,
+    Object? email = freezed,
+    Object? ts = freezed,
   }) {
     return _then(_value.copyWith(
       text: text == freezed
@@ -58,6 +67,14 @@ class _$MessageCopyWithImpl<$Res> implements $MessageCopyWith<$Res> {
           ? _value.attachment
           : attachment // ignore: cast_nullable_to_non_nullable
               as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      ts: ts == freezed
+          ? _value.ts
+          : ts // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -68,7 +85,12 @@ abstract class _$$_MessageCopyWith<$Res> implements $MessageCopyWith<$Res> {
           _$_Message value, $Res Function(_$_Message) then) =
       __$$_MessageCopyWithImpl<$Res>;
   @override
-  $Res call({String text, String subject, String attachment});
+  $Res call(
+      {String text,
+      String subject,
+      String attachment,
+      String email,
+      DateTime ts});
 }
 
 /// @nodoc
@@ -85,6 +107,8 @@ class __$$_MessageCopyWithImpl<$Res> extends _$MessageCopyWithImpl<$Res>
     Object? text = freezed,
     Object? subject = freezed,
     Object? attachment = freezed,
+    Object? email = freezed,
+    Object? ts = freezed,
   }) {
     return _then(_$_Message(
       text: text == freezed
@@ -99,6 +123,14 @@ class __$$_MessageCopyWithImpl<$Res> extends _$MessageCopyWithImpl<$Res>
           ? _value.attachment
           : attachment // ignore: cast_nullable_to_non_nullable
               as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      ts: ts == freezed
+          ? _value.ts
+          : ts // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -107,7 +139,11 @@ class __$$_MessageCopyWithImpl<$Res> extends _$MessageCopyWithImpl<$Res>
 
 class _$_Message implements _Message {
   const _$_Message(
-      {required this.text, required this.subject, required this.attachment});
+      {required this.text,
+      required this.subject,
+      required this.attachment,
+      required this.email,
+      required this.ts});
 
   @override
   final String text;
@@ -115,10 +151,14 @@ class _$_Message implements _Message {
   final String subject;
   @override
   final String attachment;
+  @override
+  final String email;
+  @override
+  final DateTime ts;
 
   @override
   String toString() {
-    return 'Message(text: $text, subject: $subject, attachment: $attachment)';
+    return 'Message(text: $text, subject: $subject, attachment: $attachment, email: $email, ts: $ts)';
   }
 
   @override
@@ -129,7 +169,9 @@ class _$_Message implements _Message {
             const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.subject, subject) &&
             const DeepCollectionEquality()
-                .equals(other.attachment, attachment));
+                .equals(other.attachment, attachment) &&
+            const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.ts, ts));
   }
 
   @override
@@ -137,7 +179,9 @@ class _$_Message implements _Message {
       runtimeType,
       const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(subject),
-      const DeepCollectionEquality().hash(attachment));
+      const DeepCollectionEquality().hash(attachment),
+      const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(ts));
 
   @JsonKey(ignore: true)
   @override
@@ -149,7 +193,9 @@ abstract class _Message implements Message {
   const factory _Message(
       {required final String text,
       required final String subject,
-      required final String attachment}) = _$_Message;
+      required final String attachment,
+      required final String email,
+      required final DateTime ts}) = _$_Message;
 
   @override
   String get text => throw _privateConstructorUsedError;
@@ -157,6 +203,10 @@ abstract class _Message implements Message {
   String get subject => throw _privateConstructorUsedError;
   @override
   String get attachment => throw _privateConstructorUsedError;
+  @override
+  String get email => throw _privateConstructorUsedError;
+  @override
+  DateTime get ts => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_MessageCopyWith<_$_Message> get copyWith =>
