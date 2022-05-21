@@ -20,6 +20,7 @@ mixin _$Message {
   String get subject => throw _privateConstructorUsedError;
   String get attachment => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
+  String get phone => throw _privateConstructorUsedError;
   DateTime get ts => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -35,6 +36,7 @@ abstract class $MessageCopyWith<$Res> {
       String subject,
       String attachment,
       String email,
+      String phone,
       DateTime ts});
 }
 
@@ -52,6 +54,7 @@ class _$MessageCopyWithImpl<$Res> implements $MessageCopyWith<$Res> {
     Object? subject = freezed,
     Object? attachment = freezed,
     Object? email = freezed,
+    Object? phone = freezed,
     Object? ts = freezed,
   }) {
     return _then(_value.copyWith(
@@ -70,6 +73,10 @@ class _$MessageCopyWithImpl<$Res> implements $MessageCopyWith<$Res> {
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      phone: phone == freezed
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
               as String,
       ts: ts == freezed
           ? _value.ts
@@ -90,6 +97,7 @@ abstract class _$$_MessageCopyWith<$Res> implements $MessageCopyWith<$Res> {
       String subject,
       String attachment,
       String email,
+      String phone,
       DateTime ts});
 }
 
@@ -108,6 +116,7 @@ class __$$_MessageCopyWithImpl<$Res> extends _$MessageCopyWithImpl<$Res>
     Object? subject = freezed,
     Object? attachment = freezed,
     Object? email = freezed,
+    Object? phone = freezed,
     Object? ts = freezed,
   }) {
     return _then(_$_Message(
@@ -127,6 +136,10 @@ class __$$_MessageCopyWithImpl<$Res> extends _$MessageCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
+      phone: phone == freezed
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String,
       ts: ts == freezed
           ? _value.ts
           : ts // ignore: cast_nullable_to_non_nullable
@@ -143,6 +156,7 @@ class _$_Message implements _Message {
       required this.subject,
       required this.attachment,
       required this.email,
+      required this.phone,
       required this.ts});
 
   @override
@@ -154,11 +168,13 @@ class _$_Message implements _Message {
   @override
   final String email;
   @override
+  final String phone;
+  @override
   final DateTime ts;
 
   @override
   String toString() {
-    return 'Message(text: $text, subject: $subject, attachment: $attachment, email: $email, ts: $ts)';
+    return 'Message(text: $text, subject: $subject, attachment: $attachment, email: $email, phone: $phone, ts: $ts)';
   }
 
   @override
@@ -171,6 +187,7 @@ class _$_Message implements _Message {
             const DeepCollectionEquality()
                 .equals(other.attachment, attachment) &&
             const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.phone, phone) &&
             const DeepCollectionEquality().equals(other.ts, ts));
   }
 
@@ -181,6 +198,7 @@ class _$_Message implements _Message {
       const DeepCollectionEquality().hash(subject),
       const DeepCollectionEquality().hash(attachment),
       const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(phone),
       const DeepCollectionEquality().hash(ts));
 
   @JsonKey(ignore: true)
@@ -195,6 +213,7 @@ abstract class _Message implements Message {
       required final String subject,
       required final String attachment,
       required final String email,
+      required final String phone,
       required final DateTime ts}) = _$_Message;
 
   @override
@@ -205,6 +224,8 @@ abstract class _Message implements Message {
   String get attachment => throw _privateConstructorUsedError;
   @override
   String get email => throw _privateConstructorUsedError;
+  @override
+  String get phone => throw _privateConstructorUsedError;
   @override
   DateTime get ts => throw _privateConstructorUsedError;
   @override

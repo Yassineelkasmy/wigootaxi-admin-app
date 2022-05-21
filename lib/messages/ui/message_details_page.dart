@@ -40,6 +40,21 @@ class MessageDetailsPage extends StatelessWidget {
               ),
               20.h.verticalSpace,
               Text(
+                'Téléphone :',
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              5.h.verticalSpace,
+              Text(
+                message.phone,
+                style: TextStyle(
+                  fontSize: 18.sp,
+                ),
+              ),
+              20.h.verticalSpace,
+              Text(
                 'Sujet:',
                 style: TextStyle(
                   fontSize: 18.sp,
@@ -84,27 +99,30 @@ class MessageDetailsPage extends StatelessWidget {
                 ),
               ),
               20.h.verticalSpace,
-              Text(
-                'Image:',
-                style: TextStyle(
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.bold,
+              if (message.attachment != '')
+                Text(
+                  'Image:',
+                  style: TextStyle(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
               5.h.verticalSpace,
-              SizedBox(
-                width: double.maxFinite,
-                child: ElevatedButton.icon(
-                  onPressed: () {
-                    AutoRouter.of(context).push(
-                      DocumentImagePageRoute(
-                          image: message.attachment, title: 'Image du rapport'),
-                    );
-                  },
-                  icon: Icon(Icons.image),
-                  label: Text('Voir l`image'),
-                ),
-              )
+              if (message.attachment != '')
+                SizedBox(
+                  width: double.maxFinite,
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      AutoRouter.of(context).push(
+                        DocumentImagePageRoute(
+                            image: message.attachment,
+                            title: 'Image du rapport'),
+                      );
+                    },
+                    icon: const Icon(Icons.image),
+                    label: const Text('Voir l`image'),
+                  ),
+                )
             ],
           ),
         ),

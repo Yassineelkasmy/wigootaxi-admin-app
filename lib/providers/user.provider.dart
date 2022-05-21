@@ -5,12 +5,12 @@ import 'package:wigootaxiadmin/user/application/user_controller.dart';
 import 'package:wigootaxiadmin/user/application/user_state.dart';
 import 'package:wigootaxiadmin/user/services/users_service.dart';
 
-final userProvider = StateNotifierProvider<UserController, UserState>(
+final usersProvider = StateNotifierProvider<UserController, UserState>(
   (ref) {
-    final userController = UserController(
+    final usersController = UserController(
       UserService(FirebaseFirestore.instance),
     );
 
-    return userController;
+    return usersController;
   },
 );

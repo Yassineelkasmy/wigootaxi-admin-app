@@ -11,7 +11,7 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
       username: json['username'] as String,
       isPhoneVerified: json['isPhoneVerified'] as bool,
       email: json['email'] as String,
-      phone: json['phone'] as String,
+      phone: json['phone'] as String?,
       ts: DateTime.parse(json['ts'] as String),
     );
 

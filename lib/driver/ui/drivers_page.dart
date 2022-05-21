@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:wigootaxiadmin/driver/ui/driver_expandable.dart';
 import 'package:wigootaxiadmin/driver/ui/driver_item.dart';
 import 'package:wigootaxiadmin/providers/driver_provider.provider.dart';
 
@@ -22,7 +23,7 @@ class DriversPage extends HookConsumerWidget {
         child: ListView.builder(
           itemCount: driverState.drivers.length,
           itemBuilder: (context, index) {
-            return DriverItem(driver: driverState.drivers[index]);
+            return DriverExpandable(driver: driverState.drivers[index]);
           },
         ),
       ),

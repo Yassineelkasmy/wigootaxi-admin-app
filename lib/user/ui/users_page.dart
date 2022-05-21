@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:wigootaxiadmin/driver/ui/driver_item.dart';
-import 'package:wigootaxiadmin/providers/driver_provider.provider.dart';
+import 'package:wigootaxiadmin/providers/user.provider.dart';
+import 'package:wigootaxiadmin/user/ui/user_item.dart';
+import 'package:wigootaxiadmin/user/ui/user_item_expandable.dart';
 
 class UsersPage extends HookConsumerWidget {
   const UsersPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final driverState = ref.watch(driverProivder);
+    final usersState = ref.watch(usersProvider);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chauffeurs'),
+        title: Text('Utilisateurs'),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(
@@ -20,9 +22,9 @@ class UsersPage extends HookConsumerWidget {
           vertical: 20.h,
         ),
         child: ListView.builder(
-          itemCount: driverState.drivers.length,
+          itemCount: usersState.users.length,
           itemBuilder: (context, index) {
-            return DriverItem(driver: driverState.drivers[index]);
+            return UserItemExpandable(user: usersState.users[index]);
           },
         ),
       ),

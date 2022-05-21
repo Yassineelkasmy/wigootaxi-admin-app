@@ -12,7 +12,7 @@ class User with _$User {
     required String username,
     required bool isPhoneVerified,
     required String email,
-    required String phone,
+    String? phone,
     required DateTime ts,
   }) = _User;
 

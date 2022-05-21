@@ -31,8 +31,10 @@ class DriverService {
 
   Future<Either<FireStoreFailure, List<Driver>>> getDrivers() async {
     try {
-      final data =
-          await collectionReference.orderBy(FieldPath.documentId).get();
+      final data = await collectionReference
+          .where('status', isEqualTo: 'accepted')
+          .orderBy(FieldPath.documentId)
+          .get();
       final requests = data.docs
           .map(
             (doc) => Driver.fromJson((doc.data() as Map<String, dynamic>)

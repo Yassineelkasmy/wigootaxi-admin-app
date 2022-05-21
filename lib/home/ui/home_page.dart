@@ -25,10 +25,9 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              20.h.verticalSpace,
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  35.h.horizontalSpace,
                   buildHomeCard(
                     text: 'Chauffeurs',
                     icon: Icons.person,
@@ -36,6 +35,7 @@ class HomePage extends StatelessWidget {
                       AutoRouter.of(context).push(DriversPageRoute());
                     },
                   ),
+                  10.h.horizontalSpace,
                   buildHomeCard(
                     text: 'Utilisateurs',
                     icon: Icons.man,
@@ -47,8 +47,8 @@ class HomePage extends StatelessWidget {
               ),
               20.h.verticalSpace,
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  35.h.horizontalSpace,
                   buildHomeCard(
                     text: 'Demandes',
                     icon: Icons.car_rental,
@@ -56,6 +56,7 @@ class HomePage extends StatelessWidget {
                       AutoRouter.of(context).push(SubmissionsPageRoute());
                     },
                   ),
+                  10.h.horizontalSpace,
                   buildHomeCard(
                     text: 'Messages',
                     icon: Icons.message,

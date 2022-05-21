@@ -49,6 +49,10 @@ class SubmissionService {
   ) async {
     try {
       await collectionReference.doc(id).update({"status": status});
+      await FirebaseFirestore.instance
+          .collection('drivers')
+          .doc(id)
+          .update({"status": status});
       return right(unit);
     } catch (e) {
       return left(const SubmissionFailure.serverError());

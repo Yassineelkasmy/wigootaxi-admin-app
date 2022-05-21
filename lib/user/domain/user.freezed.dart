@@ -20,7 +20,7 @@ mixin _$User {
   String get username => throw _privateConstructorUsedError;
   bool get isPhoneVerified => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
-  String get phone => throw _privateConstructorUsedError;
+  String? get phone => throw _privateConstructorUsedError;
   DateTime get ts => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -36,7 +36,7 @@ abstract class $UserCopyWith<$Res> {
       String username,
       bool isPhoneVerified,
       String email,
-      String phone,
+      String? phone,
       DateTime ts});
 }
 
@@ -77,7 +77,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       phone: phone == freezed
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       ts: ts == freezed
           ? _value.ts
           : ts // ignore: cast_nullable_to_non_nullable
@@ -96,7 +96,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String username,
       bool isPhoneVerified,
       String email,
-      String phone,
+      String? phone,
       DateTime ts});
 }
 
@@ -138,7 +138,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       phone: phone == freezed
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       ts: ts == freezed
           ? _value.ts
           : ts // ignore: cast_nullable_to_non_nullable
@@ -155,7 +155,7 @@ class _$_User implements _User {
       required this.username,
       required this.isPhoneVerified,
       required this.email,
-      required this.phone,
+      this.phone,
       required this.ts});
 
   @override
@@ -167,7 +167,7 @@ class _$_User implements _User {
   @override
   final String email;
   @override
-  final String phone;
+  final String? phone;
   @override
   final DateTime ts;
 
@@ -212,7 +212,7 @@ abstract class _User implements User {
       required final String username,
       required final bool isPhoneVerified,
       required final String email,
-      required final String phone,
+      final String? phone,
       required final DateTime ts}) = _$_User;
 
   @override
@@ -224,7 +224,7 @@ abstract class _User implements User {
   @override
   String get email => throw _privateConstructorUsedError;
   @override
-  String get phone => throw _privateConstructorUsedError;
+  String? get phone => throw _privateConstructorUsedError;
   @override
   DateTime get ts => throw _privateConstructorUsedError;
   @override
